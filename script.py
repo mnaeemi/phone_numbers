@@ -4,7 +4,8 @@ with open('./input.csv','r') as f:
 temp_file = temp_file.split('\n')
 
 output = []
-for line in temp_file:
+output.append(temp_file[0])
+for line in temp_file[1:]:
     temp_line = line.split(',')
     if temp_line[3].startswith('i'):
         temp_line[3] = '+' + temp_line[3][1:]
